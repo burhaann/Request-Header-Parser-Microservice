@@ -25,7 +25,13 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", function (req, res) {
-  console.log(req);
+  console.log(
+    req.ip +
+      " xxx " +
+      req.headers["accept-language"] +
+      " xxx " +
+      req.headers["user-agent"]
+  );
 });
 
 // listen for requests :)
