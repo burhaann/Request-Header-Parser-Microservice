@@ -28,9 +28,9 @@ app.get("/api/whoami", function (req, res) {
   console.log(
     req.ip +
       " xxx " +
-      req.headers["accept-language"] +
+      req.rawHeaders["accept-language"] +
       " xxx " +
-      req.headers["user-agent"]
+      req.rawHeaders["user-agent"]
   );
 });
 
