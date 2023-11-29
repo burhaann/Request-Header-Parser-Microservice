@@ -40,8 +40,8 @@ app.get("/api/whoami", function (req, res) {
 
   res.json(response);
 
-  console.log(req.headers);
-  console.log(req.rawHeaders);
+  // console.log(req.headers);
+  // console.log(req.rawHeaders);
 });
 
 // listen for requests :)
