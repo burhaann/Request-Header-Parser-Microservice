@@ -25,13 +25,17 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", function (req, res) {
-  console.log(
-    req.ip +
-      " xxx " +
-      req.rawHeaders["accept-language"] +
-      " xxx " +
-      req.rawHeaders["user-agent"]
-  );
+  const ipAddress = req.ip; // Getting the IP address from the request
+  const language = req.headers["accept-language"]; // Getting the preferred language from the headers
+  const software = req.headers["user-agent"]; // Getting the software information from the headers
+
+  const response = {
+    ipaddress: ipAddress,
+    language: language,
+    software: software,
+  };
+
+  res.json(response);
 });
 
 // listen for requests :)
