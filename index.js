@@ -36,6 +36,8 @@ app.get("/api/whoami", function (req, res) {
   };
 
   res.json(response);
+
+  console.log(req.headers.user - agent + "xxxxxxxxxxxxxx");
 });
 
 // listen for requests :)
